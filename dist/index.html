@@ -37,7 +37,40 @@
       <h1 class="scrolling-text">
     
       </h1>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#farm">Our Farm</a></li>
+            <li><a href="#seeds">Get Seeds</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+      <main>
+        <section id="home">
+          <!-- Home content goes here -->
+        </section>
+        <section id="about">
+          <!-- About Us content goes here -->
+        </section>
+        <section id="history">
+          <!-- History content goes here -->
+        </section>
+        <section id="farm">
+          <!-- Our Farm content goes here -->
+        </section>
+        <section id="seeds">
+          <!-- Get Seeds content goes here -->
+        </section>
+      </main>
+    
+   
+    
     </header>
+    
     <div id="gallery-container"></div>
     <script src="/main.1f19ae8e.js"></script>
   </body>
@@ -45,5 +78,36 @@
   <style>body {
       margin: 0;
       background-color: #222;
-    }</style>
+    }
+
+    nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Generation", sans-serif;
+}
+nav a:hover {
+  color: limegreen;
+}</style>
 </html>

@@ -37414,7 +37414,7 @@ var copies = 5;
 var meshes = [];
 var fontLoader = new _FontLoader.FontLoader();
 var textMesh;
-fontLoader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", function (font) {
+fontLoader.load("https://threejs.org/examples/fonts/droid/droid_sans_bold.typeface.json", function (font) {
   var textGeometry = new _TextGeometry.TextGeometry("Dragon Fruit Panama", {
     font: font,
     size: 1,
@@ -37497,6 +37497,21 @@ window.addEventListener("mousemove", function (event) {
   mouse.x = event.clientX / window.innerWidth * 2 - 1;
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
+
+//adding navigation bar 
+
+$(document).ready(function () {
+  // Smooth scrolling
+  $('a[href^="#"]').on('click', function (event) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
+  });
+});
 },{"three":"node_modules/three/build/three.module.js","three/examples/jsm/controls/OrbitControls":"node_modules/three/examples/jsm/controls/OrbitControls.js","three/examples/jsm/loaders/FontLoader":"node_modules/three/examples/jsm/loaders/FontLoader.js","three/examples/jsm/geometries/TextGeometry":"node_modules/three/examples/jsm/geometries/TextGeometry.js","./images/image1.png":"images/image1.png","./images/image2.png":"images/image2.png","./images/image3.png":"images/image3.png","./images/image4.png":"images/image4.png","./images/image5.png":"images/image5.png","./images/image6.jpeg":"images/image6.jpeg","./images/image7.jpeg":"images/image7.jpeg","./images/image8.jpeg":"images/image8.jpeg","./images/image9.jpeg":"images/image9.jpeg","./images/image10.jpeg":"images/image10.jpeg","./images/image11.jpeg":"images/image11.jpeg","./images/image12.jpeg":"images/image12.jpeg"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -37522,7 +37537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61921" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54567" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

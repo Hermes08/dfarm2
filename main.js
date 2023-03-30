@@ -52,7 +52,7 @@ const meshes = [];
 const fontLoader = new FontLoader();
 let textMesh;
 
-fontLoader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", (font) => {
+fontLoader.load("https://threejs.org/examples/fonts/droid/droid_sans_bold.typeface.json", (font) => {
   const textGeometry = new TextGeometry("Dragon Fruit Panama", {
     font: font,
     size: 1,
@@ -154,4 +154,18 @@ window.addEventListener("scroll", () => {
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
   });
   
+  //adding navigation bar 
+
+  $(document).ready(function() {
+    // Smooth scrolling
+    $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    });
+  });
   
